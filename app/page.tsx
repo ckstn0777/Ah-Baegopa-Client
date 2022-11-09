@@ -1,13 +1,5 @@
-/** @jsxImportSource @emotion/react */
-
-'use client'
-
-import { css } from '@emotion/react'
+import Title from '../components/Title/Title'
 
 export default function Page() {
-  return <h1 css={wrapper}>Hello, Next.js!</h1>
+  return <Title />
 }
-
-const wrapper = css`
-  color: red;
-`
