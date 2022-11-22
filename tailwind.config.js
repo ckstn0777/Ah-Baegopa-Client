@@ -6,7 +6,15 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#FF7272',
+        'primary-hover': '#FF6767',
+        'primary-active': '#FF5959',
+
+        gray4: '#F4F4F4',
+      },
+    },
   },
   plugins: [],
 }
