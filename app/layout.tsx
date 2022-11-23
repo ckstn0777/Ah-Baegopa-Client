@@ -1,9 +1,16 @@
 import Header from '../components/common/Header'
 import '../styles/globals.scss'
 
+import { Noto_Sans_KR } from '@next/font/google'
+import FooterNav from '../components/common/FooterNav'
+
+const notoSansKR = Noto_Sans_KR({
+  weight: ['400', '700'],
+})
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
+    <html className={notoSansKR.className}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Ah-Baegopa</title>
@@ -11,6 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Header />
         {children}
+        <FooterNav />
       </body>
     </html>
   )

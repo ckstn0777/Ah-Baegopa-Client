@@ -12,7 +12,7 @@ module.exports = {
         'primary-hover': '#FF6767',
         'primary-active': '#FF5959',
 
-        gray4: '#F4F4F4',
+        gray2: '#F4F4F4',
       },
     },
   },

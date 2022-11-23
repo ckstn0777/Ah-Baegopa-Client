@@ -27,7 +27,8 @@ body {
 }
 
 body {
-  font-family: '';
+  // font-family: '-apple-system', BlinkMacSystemFont, 'Malgun Gothic', '맑은 고딕',
+  //   'Apple SD Gothic Neo', sans-serif;
   //font-size: 1.6rem;
 }
 
@@ -36,3 +37,10 @@ a {
 }
 
 /* Common */
+.flexbox-center {
+  @apply flex justify-center items-center;
+}
+
+.flexbox-between {
+  @apply flex justify-between items-center;
+}
