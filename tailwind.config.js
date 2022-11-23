@@ -14,6 +14,13 @@ module.exports = {
 
         gray2: '#F4F4F4',
       },
+      fontSize: {
+        heading2: '1.313rem',
+        heading3: '1.125rem',
+        body2: '0.875rem',
+        caption1: '0.75rem',
+        caption2: '0.688rem',
+      },
     },
   },
   plugins: [],
