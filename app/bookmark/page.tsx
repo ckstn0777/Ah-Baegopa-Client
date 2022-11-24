@@ -1,3 +1,9 @@
+import BasicLayout from '@components/common/BasicLayout'
+
 export default function Page() {
-  return <div>북마크 페이지 입니다. </div>
+  return (
+    <BasicLayout>
+      <div>북마크 페이지 입니다. </div>
+    </BasicLayout>
+  )
 }

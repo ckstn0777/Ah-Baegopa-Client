@@ -11,12 +11,15 @@ module.exports = {
         primary: '#FF7272',
         'primary-hover': '#FF6767',
         'primary-active': '#FF5959',
+        'primary-disabled': '#FFADAD',
 
         gray2: '#F4F4F4',
       },
       fontSize: {
         heading2: '1.313rem',
         heading3: '1.125rem',
+        heading4: '1rem',
+        heading5: '0.875rem',
         body2: '0.875rem',
         caption1: '0.75rem',
         caption2: '0.688rem',

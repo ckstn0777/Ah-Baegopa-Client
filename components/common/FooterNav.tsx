@@ -8,7 +8,7 @@ function FooterNav() {
   const pathname = usePathname()
 
   return (
-    <div className="flex justify-around items-center w-full absolute left-0 bottom-0 bg-gray2 py-6">
+    <div className="flex justify-around items-center w-full fixed left-0 bottom-0 bg-gray2 py-6">
       <Link href="/" className={pathname === '/' ? 'text-primary' : ''}>
         <Home />
       </Link>
