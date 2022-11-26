@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  [data-nextjs-scroll-focus-boundary] {
+    display: contents;
+  }
+}
+
 /* _Resets */
 // :root {
 //   font-size: 62.5%;
@@ -43,4 +49,8 @@ a {
 
 .flexbox-between {
   @apply flex justify-between items-center;
+}
+
+.input-placeholder {
+  @apply placeholder:text-caption1 placeholder:-translate-y-1;
 }

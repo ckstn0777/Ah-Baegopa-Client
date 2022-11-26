@@ -13,7 +13,7 @@ function Header() {
           <Search className="ml-2" />
         </div>
         <button className="bg-primary text-white text-sm rounded-lg	px-2.5 py-2 w-16 hover:bg-primary-hover active:bg-primary-active">
-          <Link href="/login">로그인</Link>
+          <Link href="/auth/login">로그인</Link>
         </button>
       </div>
     </header>
