@@ -14,8 +14,10 @@ module.exports = {
         'primary-disabled': '#FFADAD',
 
         gray2: '#F4F4F4',
+        gray4: '#828282',
       },
       fontSize: {
+        heading1: '1.5rem',
         heading2: '1.313rem',
         heading3: '1.125rem',
         heading4: '1rem',
@@ -23,6 +25,9 @@ module.exports = {
         body2: '0.875rem',
         caption1: '0.75rem',
         caption2: '0.688rem',
+      },
+      borderRadius: {
+        '4xl': '2rem',
       },
     },
   },

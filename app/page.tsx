@@ -1,4 +1,4 @@
-import Article from '@components/Article'
+import Article from '@components/ArticleCard'
 import BasicLayout from '@components/common/BasicLayout'
 import style from './page.module.scss'
 
