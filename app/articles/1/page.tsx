@@ -9,7 +9,7 @@ export default function Page() {
       <div className="relative h-64">
         <Link
           href="/"
-          className="absolute top-10 right-5 z-10 bg-white w-10 h-10 rounded-full flexbox-center cursor-pointer"
+          className="absolute top-9 right-5 z-10 bg-white w-10 h-10 rounded-full flexbox-center cursor-pointer"
           style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25);' }}
         >
           <Close />
@@ -83,7 +83,7 @@ export default function Page() {
             id="comment"
             type="text"
             placeholder="댓글을 입력해주세요."
-            className="w-full px-4 py-3 border-solid	border-2 border-gray-2 rounded-lg	input-placeholder mb-6"
+            className="w-full px-4 py-3 border-solid	border-2 border-gray-2 rounded-lg	placeholder:text-caption1 mb-6"
           />
 
           <div className="flex flex-col gap-6">

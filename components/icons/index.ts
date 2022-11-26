@@ -13,3 +13,7 @@ export { default as Close } from './Close'
 export { default as Heart } from './Heart'
 export { default as HeartFill } from './HeartFill'
 export { default as Share } from './Share'
+
+export { default as ArrowLeft } from './ArrowLeft'
+export { default as ArrowDownFill } from './ArrowDownFill'
+export { default as ArrowUpFill } from './ArrowUpFill'
