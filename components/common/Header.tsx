@@ -12,9 +12,13 @@ function Header() {
         <div className="bg-gray2 w-28 h-9 rounded-lg flex items-center">
           <Search className="ml-2" />
         </div>
-        <button className="bg-primary text-white text-sm rounded-lg	px-2.5 py-2 w-16 hover:bg-primary-hover active:bg-primary-active">
-          <Link href="/auth/login">로그인</Link>
-        </button>
+
+        <Link
+          href="/auth/login"
+          className="flexbox-center bg-primary text-white text-sm rounded-lg w-16 h-10  hover:bg-primary-hover active:bg-primary-active"
+        >
+          로그인
+        </Link>
       </div>
     </header>
   )

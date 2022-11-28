@@ -22,7 +22,7 @@ function Page() {
               id="title"
               type="text"
               placeholder="제목을 입력하세요."
-              className="px-4 py-3 border-solid	border-2 border-gray-2 rounded-lg	input-placeholder"
+              className="w-full px-4 py-3 border-solid	border-2 border-gray-2 rounded-lg	input-placeholder"
             />
           </div>
 
