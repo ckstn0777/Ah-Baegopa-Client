@@ -14,7 +14,9 @@ module.exports = {
         'primary-disabled': '#FFADAD',
 
         gray2: '#F4F4F4',
-        gray4: '#828282',
+        gray3: '#E5E5E5',
+        gray4: '#BDBDBD',
+        gray5: '#828282',
       },
       fontSize: {
         heading1: '1.5rem',

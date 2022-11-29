@@ -41,8 +41,8 @@ function Page() {
               </div>
 
               <div className="flexbox-center gap-2 h-full">
-                <span className="w-px self-stretch bg-gray4 my-2"></span>
-                <ArrowDownFill className="mr-2 text-gray4" />
+                <span className="w-px self-stretch bg-gray5 my-2"></span>
+                <ArrowDownFill className="mr-2 text-gray5" />
               </div>
             </div>
           </div>

@@ -54,3 +54,11 @@ a {
 .input-placeholder {
   @apply placeholder:text-caption1 placeholder:-translate-y-1;
 }
+
+/* Special Class */
+.compass-ul li {
+  @apply px-3 py-1.5 bg-gray3 rounded-lg text-body2 text-black;
+}
+.compass-ul li.active {
+  @apply bg-primary text-white;
+}

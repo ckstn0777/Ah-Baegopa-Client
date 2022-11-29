@@ -13,12 +13,12 @@ function CommentCard() {
             height={24}
             className="w-7 h-7 rounded-full"
           />
-          <span className="text-caption1 text-gray4">ckstn0777</span>
-          <span className="text-caption1 text-gray4">3일전</span>
+          <span className="text-caption1 text-gray5">ckstn0777</span>
+          <span className="text-caption1 text-gray5">3일전</span>
         </div>
         <p className="text-body2">우와 꼭 한번 가봐야겠어요~!</p>
 
-        <div className="flex gap-2 text-caption1 text-gray4">
+        <div className="flex gap-2 text-caption1 text-gray5">
           <span>답글</span>
           <span>삭제</span>
           <span>신고</span>

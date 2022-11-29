@@ -5,7 +5,7 @@ function BasicLayout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <Header />
-      {children}
+      <main className="px-5 py-4 pb-20">{children}</main>
       <FooterNav />
     </div>
   )

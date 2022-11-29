@@ -45,8 +45,8 @@ export default function Page() {
               height={24}
               className="w-7 h-7 rounded-full"
             />
-            <span className="text-caption1 text-gray4">ckstn0777</span>
-            <span className="text-caption1 text-gray4">3일전</span>
+            <span className="text-caption1 text-gray5">ckstn0777</span>
+            <span className="text-caption1 text-gray5">3일전</span>
           </div>
 
           <div className="flex flex-col gap-4 text-body2 mb-4">
@@ -65,11 +65,11 @@ export default function Page() {
           <div className="flexbox-between">
             <div className="flexbox-center gap-1">
               <Heart />
-              <span className="text-caption1 text-gray4">좋아요 14개</span>
+              <span className="text-caption1 text-gray5">좋아요 14개</span>
             </div>
             <div className="flexbox-center gap-1">
               <Share />
-              <span className="text-caption1 text-gray4">공유하기</span>
+              <span className="text-caption1 text-gray5">공유하기</span>
             </div>
           </div>
         </article>
