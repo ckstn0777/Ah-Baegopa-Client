@@ -7,7 +7,7 @@ function ArticleCard() {
       <Link href="/articles/1">
         <div className="mb-2">
           <Image
-            src="http://source.unsplash.com/vdkyWisomns"
+            src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?ixlib"
             alt="article image"
             width={350}
             height={100}
@@ -22,11 +22,11 @@ function ArticleCard() {
           </p>
           <div className="flexbox-between">
             <div>
-              <span className="text-caption1">좋아요 9개</span>
+              <span className="text-caption1 mr-1.5">좋아요 9개</span>
               <span className="text-caption1">댓글 3개</span>
             </div>
             <div>
-              <span className="text-caption1">ckstn0777</span>
+              <span className="text-caption1 mr-1.5">ckstn0777</span>
               <span className="text-caption1">21일전</span>
             </div>
           </div>

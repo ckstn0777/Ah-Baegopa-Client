@@ -43,15 +43,15 @@ export default function Page() {
       <h2 className="text-heading3 font-bold mb-2">21건의 결과가 있습니다.</h2>
       <div className="flex items-center gap-2 text-body2 mb-4">
         <span className="text-primary">기본순</span>
-        <span className="text-caption1">|</span>
+        <span className="text-caption1 text-gray4">|</span>
         <span className="text-gray4">별점순</span>
-        <span className="text-caption1">|</span>
+        <span className="text-caption1 text-gray4">|</span>
         <span className="text-gray4">리뷰 많은 순</span>
-        <span className="text-caption1">|</span>
+        <span className="text-caption1 text-gray4">|</span>
         <span className="text-gray4">가격순</span>
       </div>
 
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-5">
         <CafeteriaCard />
         <CafeteriaCard />
       </div>
