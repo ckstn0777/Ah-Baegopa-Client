@@ -12,6 +12,8 @@ module.exports = {
         'primary-hover': '#FF6767',
         'primary-active': '#FF5959',
         'primary-disabled': '#FFADAD',
+        'primary-light': '#FFDEDE',
+        'primary-dark': '#FF2020',
 
         gray2: '#F4F4F4',
         gray3: '#E5E5E5',

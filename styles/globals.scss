@@ -52,7 +52,8 @@ a {
 }
 
 .input-placeholder {
-  @apply placeholder:text-caption1 placeholder:-translate-y-1;
+  @apply placeholder:text-caption1;
+  // placeholder:-translate-y-1
 }
 
 /* Special Class */
