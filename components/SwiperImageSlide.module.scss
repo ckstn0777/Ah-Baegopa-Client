@@ -1,0 +1,14 @@
+.sliderWrapper {
+  :global(.swiper-pagination-bullets) {
+    @apply bg-gray3 w-fit absolute left-1/2 rounded-lg flex gap-0.5 px-0.5 justify-center items-center h-5;
+    transform: translate(-50%, 0);
+  }
+
+  :global(.swiper-pagination-bullet) {
+    @apply bg-primary-disabled w-2.5 h-2.5 opacity-100;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    @apply bg-primary w-2.5 h-2.5;
+  }
+}

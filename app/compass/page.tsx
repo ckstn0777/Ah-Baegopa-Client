@@ -1,5 +1,6 @@
 import CafeteriaCard from '@components/CafeteriaCard'
 import BasicLayout from '@components/common/BasicLayout'
+import Link from 'next/link'
 
 export default function Page() {
   return (
@@ -52,8 +53,12 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <CafeteriaCard />
-        <CafeteriaCard />
+        <Link href="/market/1/information" as="/market/1/information">
+          <CafeteriaCard />
+        </Link>
+        <Link href="/market/2/information" as="/market/1/information">
+          <CafeteriaCard />
+        </Link>
       </div>
     </BasicLayout>
   )
