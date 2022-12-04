@@ -1,8 +1,19 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { Search } from '../icons'
+import { signOut, useSession } from 'next-auth/react'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 function Header() {
+  const { data: session, status } = useSession()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const router = useRouter()
+
+  console.log(session, status)
+
   return (
     <header className="flexbox-between p-4 shadow">
       <Link href="/">
@@ -15,12 +26,41 @@ function Header() {
           </Link>
         </div>
 
-        <Link
-          href="/auth/login"
-          className="flexbox-center bg-primary text-white text-sm rounded-lg w-16 h-9  hover:bg-primary-hover active:bg-primary-active"
-        >
-          로그인
-        </Link>
+        {session && status === 'authenticated' ? (
+          <div className="relative">
+            <img
+              src={session.user!.image!}
+              alt="user"
+              width={40}
+              height={40}
+              className="rounded-full"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
+
+            <div
+              className={
+                isMenuOpen ? 'block absolute -left-16 top-10 bg-gray2 drop-shadow-lg' : 'hidden'
+              }
+            >
+              <ul className="text-body2">
+                <li className="px-4 py-2 border-b">프로필 설정</li>
+                <li className="px-4 py-2 border-b" onClick={() => router.push('/article/write')}>
+                  아티클 생성
+                </li>
+                <li className="px-4 py-2 border-b" onClick={() => signOut()}>
+                  로그아웃
+                </li>
+              </ul>
+            </div>
+          </div>
+        ) : (
+          <Link
+            href="/auth/login"
+            className="flexbox-center bg-primary text-white text-sm rounded-lg w-16 h-9  hover:bg-primary-hover active:bg-primary-active"
+          >
+            로그인
+          </Link>
+        )}
       </div>
     </header>
   )

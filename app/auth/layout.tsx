@@ -1,8 +1,22 @@
+'use client'
+
 import { Google, KaKao, Naver } from '@components/icons'
 import Image from 'next/image'
 import Link from 'next/link'
+import { signIn, useSession } from 'next-auth/react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const { data: session, status } = useSession()
+  const router = useRouter()
+
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.push('/')
+    }
+  }, [router, status])
+
   return (
     <main className="h-screen flexbox-center flex-col px-10">
       <div className="mb-10">
@@ -24,6 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <button
           className="flexbox-center gap-2 text-sm text-white rounded-lg py-3.5"
           style={{ backgroundColor: '#19CE60' }}
+          onClick={() => signIn('naver')}
         >
           <Naver />
           네이버
