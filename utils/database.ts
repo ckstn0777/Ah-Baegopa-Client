@@ -1,2 +1,5 @@
-// TODO: export const db = new DatabaseConnection(...);
-export {}
+import { PrismaClient } from '@prisma/client'
+
+const client = new PrismaClient()
+
+export default client
