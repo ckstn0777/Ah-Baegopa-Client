@@ -12,7 +12,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
 
-  console.log(session, status)
+  console.log('session', session)
 
   return (
     <header className="flexbox-between p-4 shadow">
