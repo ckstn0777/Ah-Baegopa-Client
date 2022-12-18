@@ -29,7 +29,7 @@ function Header() {
         {session && status === 'authenticated' ? (
           <div className="relative">
             <img
-              src={session.user!.image!}
+              src={session.user.image}
               alt="user"
               width={40}
               height={40}
