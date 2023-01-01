@@ -16,7 +16,9 @@ model User {
   age           String?
   gender        Gender    @default(U)
   role          Role      @default(USER)
-  accounts      Account[]
+
+  accounts Account[]
+  articles Article[]
 
   @@map("users")
 }
@@ -49,4 +51,40 @@ model Account {
 
   @@unique([provider, providerAccountId])
   @@map("accounts")
+}
+
+model Article {
+  id    Int    @id @default(autoincrement())
+  title String
+  body  String @db.Text
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  ArticleHashTag ArticleHashTag[]
+
+  @@map("articles")
+}
+
+model HashTag {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  ArticleHashTag ArticleHashTag[]
+
+  @@map("hashtag")
+}
+
+model ArticleHashTag {
+  articleId Int @map("article_id")
+  hashtagId Int @map("hashtag_id")
+
+  article Article @relation(fields: [articleId], references: [id])
+  hashtag HashTag @relation(fields: [hashtagId], references: [id])
+
+  @@id([articleId, hashtagId])
+  @@map("article_hashtag")
 }
