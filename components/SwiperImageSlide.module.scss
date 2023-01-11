@@ -1,6 +1,6 @@
 .sliderWrapper {
   :global(.swiper-pagination-bullets) {
-    @apply bg-gray3 w-fit absolute left-1/2 rounded-lg flex gap-0.5 px-0.5 justify-center items-center h-5;
+    @apply bg-gray2 w-fit absolute left-1/2 bottom-2 rounded-xl flex gap-0.5 px-0.5 justify-center items-center h-5 drop-shadow-md;
     transform: translate(-50%, 0);
   }
 

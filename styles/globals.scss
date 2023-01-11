@@ -63,3 +63,11 @@ a {
 .compass-ul li.active {
   @apply bg-primary text-white;
 }
+
+/* table */
+.table-wrapper {
+  @apply border-t border-l border-gray4;
+}
+.table-wrapper > li {
+  @apply border-r border-b border-gray4;
+}

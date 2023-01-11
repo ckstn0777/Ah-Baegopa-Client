@@ -53,6 +53,7 @@ model Account {
   @@map("accounts")
 }
 
+// ***********************************아티클 정보*******************************************
 model Article {
   id    Int    @id @default(autoincrement())
   title String
@@ -87,4 +88,18 @@ model ArticleHashTag {
 
   @@id([articleId, hashtagId])
   @@map("article_hashtag")
+}
+
+// ***********************************식당 정보*******************************************
+model Market {
+  id   Int    @id @default(autoincrement())
+  name String
+  // 이미지
+  // 별점
+  // 해시태그
+  // 카테고리
+  // 테마
+  //
+
+  @@map("markets")
 }
