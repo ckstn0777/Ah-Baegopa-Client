@@ -90,8 +90,31 @@ export default function Page() {
           /> */}
 
           <div className="flex flex-col gap-6">
-            <CommentCard />
-            <CommentCard />
+            <CommentCard>
+              <div className="flex flex-col gap-2">
+                <CommentCard.UserInfo
+                  username={'기운찬곰'}
+                  profile={'http://source.unsplash.com/OekcvtMyjG8'}
+                  regDate={'3일전'}
+                />
+                <CommentCard.Comment>우와 꼭 한번 가봐야겠어요~!</CommentCard.Comment>
+                <CommentCard.AddInfo isReply isDelete isReport />
+              </div>
+              <CommentCard.HeartBox>5</CommentCard.HeartBox>
+            </CommentCard>
+
+            <CommentCard>
+              <div className="flex flex-col gap-2">
+                <CommentCard.UserInfo
+                  username={'기운찬곰'}
+                  profile={'http://source.unsplash.com/OekcvtMyjG8'}
+                  regDate={'3일전'}
+                />
+                <CommentCard.Comment>우와 꼭 한번 가봐야겠어요~!</CommentCard.Comment>
+                <CommentCard.AddInfo isReply isReport />
+              </div>
+              <CommentCard.HeartBox isHeart>12</CommentCard.HeartBox>
+            </CommentCard>
           </div>
         </div>
       </section>

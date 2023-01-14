@@ -13,9 +13,31 @@ function Page() {
         <UserInput type="text" placeholder="후기를 입력해주세요." star={true} />
 
         <div className="flex flex-col gap-6">
-          <CommentCard />
-          <CommentCard />
-          <CommentCard />
+          <CommentCard>
+            <div className="flex flex-col gap-2">
+              <CommentCard.UserInfo
+                username={'기운찬곰'}
+                profile={'http://source.unsplash.com/OekcvtMyjG8'}
+                regDate={'3일전'}
+              />
+              <CommentCard.Comment>우와 꼭 한번 가봐야겠어요~!</CommentCard.Comment>
+              <CommentCard.AddInfo isReport />
+            </div>
+            <CommentCard.StarScore>4.5</CommentCard.StarScore>
+          </CommentCard>
+
+          <CommentCard>
+            <div className="flex flex-col gap-2">
+              <CommentCard.UserInfo
+                username={'기운찬곰'}
+                profile={'http://source.unsplash.com/OekcvtMyjG8'}
+                regDate={'3일전'}
+              />
+              <CommentCard.Comment>우와 꼭 한번 가봐야겠어요~!</CommentCard.Comment>
+              <CommentCard.AddInfo isDelete isReport />
+            </div>
+            <CommentCard.StarScore>3</CommentCard.StarScore>
+          </CommentCard>
         </div>
       </article>
     </section>
