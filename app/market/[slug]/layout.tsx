@@ -56,25 +56,39 @@ function Layout({ params, children }: { params: any; children: React.ReactNode }
             pathname?.includes('information') ? 'bg-primary text-white' : 'bg-white text-black'
           }`}
         >
-          <Link href={`/market/${params.slug}/information`}>정보</Link>
+          <Link
+            href={`/market/${params.slug}/information`}
+            className="block w-full h-full"
+            replace={true}
+          >
+            정보
+          </Link>
         </li>
         <li
           className={`py-2 w-full text-center ${
             pathname?.includes('menu') ? 'bg-primary text-white' : 'bg-white text-black'
           }`}
         >
-          <Link href={`/market/${params.slug}/menu`}>메뉴</Link>
+          <Link href={`/market/${params.slug}/menu`} className="block w-full h-full" replace={true}>
+            메뉴
+          </Link>
         </li>
         <li
           className={`py-2 w-full text-center ${
             pathname?.includes('review') ? 'bg-primary text-white' : 'bg-white text-black'
           }`}
         >
-          <Link href={`/market/${params.slug}/review`}>리뷰</Link>
+          <Link
+            href={`/market/${params.slug}/review`}
+            className="block w-full h-full"
+            replace={true}
+          >
+            리뷰
+          </Link>
         </li>
       </ul>
 
-      <div className="px-7 py-4">{children}</div>
+      {children}
     </main>
   )
 }
