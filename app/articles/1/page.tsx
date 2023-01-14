@@ -1,4 +1,5 @@
 import CommentCard from '@components/CommentCard'
+import UserInput from '@components/common/UserInput'
 import { Bookmark, Close, Heart, Share } from '@components/icons'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -79,12 +80,14 @@ export default function Page() {
         <div>
           <h2 className="text-heading3 font-bold mb-4">댓글 5개</h2>
 
-          <input
+          <UserInput type="text" placeholder="댓글을 입력해주세요." />
+
+          {/* <input
             id="comment"
             type="text"
             placeholder="댓글을 입력해주세요."
             className="w-full px-4 py-3 border-solid	border-2 border-gray-2 rounded-lg	placeholder:text-caption1 mb-6"
-          />
+          /> */}
 
           <div className="flex flex-col gap-6">
             <CommentCard />
