@@ -8,4 +8,10 @@
 
 - Next.js: 13.0.2
 - TypeScript
-- Emotion
+- Tailwind
+- Prisma
+- Postgresql
+
+### 실행
+
+- DB 변경 : npx prisma migrate dev

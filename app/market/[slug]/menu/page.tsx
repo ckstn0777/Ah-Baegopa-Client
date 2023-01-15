@@ -69,7 +69,7 @@ function Page() {
 
       {/* <div className="h-2 w-full bg-gray2 drop-shadow"></div> */}
 
-      <div className="bg-gray3 px-7 py-3 text-body2">
+      <div className="bg-gray2 px-7 py-3 text-body2">
         메뉴 항목과 가격은 각 매장의 사정에 따라 기재된 내용과 다를 수 있습니다.
       </div>
     </section>

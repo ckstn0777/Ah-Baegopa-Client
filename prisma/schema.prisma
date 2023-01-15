@@ -7,6 +7,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// ***********************************유저 정보*******************************************
+
 model User {
   id            String    @id @default(cuid())
   name          String
@@ -17,8 +19,9 @@ model User {
   gender        Gender    @default(U)
   role          Role      @default(USER)
 
-  accounts Account[]
-  articles Article[]
+  accounts       Account[]
+  articles       Article[]
+  market_reviews MarketReview[]
 
   @@map("users")
 }
@@ -55,10 +58,9 @@ model Account {
 
 // ***********************************아티클 정보*******************************************
 model Article {
-  id    Int    @id @default(autoincrement())
-  title String
-  body  String @db.Text
-
+  id         Int      @id @default(autoincrement())
+  title      String   @db.VarChar(255)
+  body       String   @db.Text
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 
@@ -72,7 +74,7 @@ model Article {
 
 model HashTag {
   id   Int    @id @default(autoincrement())
-  name String
+  name String @db.VarChar(255)
 
   ArticleHashTag ArticleHashTag[]
 
@@ -92,14 +94,63 @@ model ArticleHashTag {
 
 // ***********************************식당 정보*******************************************
 model Market {
-  id   Int    @id @default(autoincrement())
-  name String
-  // 이미지
-  // 별점
-  // 해시태그
-  // 카테고리
-  // 테마
-  //
+  id           Int     @id @default(autoincrement())
+  name         String  @db.VarChar(255)
+  information  String  @db.Text
+  address      String  @db.VarChar(255)
+  phone        String? @db.VarChar(255)
+  businessTime String? @db.VarChar(255)
+  homepage     String? @db.VarChar(255)
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  market_reviews MarketReview[]
+  market_images  MarketImage[]
+  market_menus   MarketMenu[]
 
   @@map("markets")
+}
+
+model MarketMenu {
+  id          Int      @id @default(autoincrement())
+  name        String   @db.VarChar(255)
+  description String?  @db.VarChar(255)
+  price       Int
+  label       String?  @db.VarChar(255) // 대표메뉴, 추천메뉴, 신메뉴 등
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  marketId Int
+  market   Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
+
+  @@map("market_menus")
+}
+
+model MarketImage {
+  id         Int      @id @default(autoincrement())
+  url        String   @db.VarChar(255)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  marketId Int
+  market   Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
+
+  @@map("market_images")
+}
+
+model MarketReview {
+  id         Int      @id @default(autoincrement())
+  rating     Float
+  review     String   @db.Text
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  userId String
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  marketId Int
+  market   Market @relation(fields: [marketId], references: [id], onDelete: Cascade)
+
+  @@map("market_reviews")
 }
