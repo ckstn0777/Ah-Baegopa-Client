@@ -12,7 +12,16 @@ declare module 'next-auth' {
       email: string
       image: string
       userId: string
+      role: 'ADMIN' | 'USER'
     }
+  }
+
+  interface User {
+    id: string
+    name: string
+    email: string
+    image: string
+    role: 'ADMIN' | 'USER'
   }
 }
 
@@ -21,5 +30,6 @@ declare module 'next-auth/jwt' {
   interface JWT {
     /** OpenID ID Token */
     userId: string
+    role: 'ADMIN' | 'USER'
   }
 }
