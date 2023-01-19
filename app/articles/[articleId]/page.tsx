@@ -11,7 +11,7 @@ export default function Page() {
         <Link
           href="/"
           className="absolute top-9 right-5 z-10 bg-white w-10 h-10 rounded-full flexbox-center cursor-pointer"
-          style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25);' }}
+          style={{ boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)' }}
         >
           <Close />
         </Link>

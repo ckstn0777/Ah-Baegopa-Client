@@ -53,10 +53,10 @@ export default function Page() {
       </div>
 
       <div className="flex flex-col gap-5">
-        <Link href="/market/1/information" as="/market/1/information">
+        <Link href="/markets/1/information">
           <CafeteriaCard />
         </Link>
-        <Link href="/market/2/information" as="/market/1/information">
+        <Link href="/markets/2/information">
           <CafeteriaCard />
         </Link>
       </div>
