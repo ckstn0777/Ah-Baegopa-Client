@@ -47,6 +47,11 @@ function Header() {
                 <li className="px-4 py-2 border-b" onClick={() => router.push('/article/write')}>
                   아티클 생성
                 </li>
+                {session.user.role === 'ADMIN' && (
+                  <li className="px-4 py-2 border-b" onClick={() => router.push('/market/write')}>
+                    가게 등록
+                  </li>
+                )}
                 <li className="px-4 py-2 border-b" onClick={() => signOut()}>
                   로그아웃
                 </li>
