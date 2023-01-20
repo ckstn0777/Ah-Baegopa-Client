@@ -16,13 +16,13 @@ function Page() {
         <form>
           <div className="flex justify-start flex-col gap-4 mb-14">
             <div className="flex gap-4">
-              <label htmlFor="name" className="text-heading3 font-bold w-20">
+              <label htmlFor="name" className="text-heading3 font-bold w-20 flex-none">
                 가게 이름
               </label>
               <input
                 type="text"
                 id="name"
-                className="flex-1 rounded-lg drop-shadow-md px-3 py-2 input-placeholder text-body2"
+                className="flex-auto rounded-lg drop-shadow-md px-3 py-2 input-placeholder text-body2 min-w-32"
                 placeholder="가게명을 입력해주세요."
               />
             </div>
@@ -51,24 +51,24 @@ function Page() {
               />
             </div>
             <div className="flex gap-4">
-              <label htmlFor="address" className="text-heading3 font-bold w-20">
+              <label htmlFor="address" className="text-heading3 font-bold w-20 flex-none">
                 위치
               </label>
               <input
                 type="text"
                 id="address"
-                className="flex-1 rounded-lg drop-shadow-md px-3 py-2 input-placeholder text-body2"
+                className="flex-auto rounded-lg drop-shadow-md px-3 py-2 input-placeholder text-body2 min-w-32"
                 placeholder="주소를 입력해주세요."
               />
             </div>
             <div className="flex gap-4">
-              <label htmlFor="phone" className="text-heading3 font-bold w-20">
+              <label htmlFor="phone" className="text-heading3 font-bold w-20 flex-none">
                 전화번호
               </label>
               <input
                 type="text"
                 id="phone"
-                className="flex-1 rounded-lg drop-shadow-md px-3 py-2 input-placeholder text-body2"
+                className="flex-auto rounded-lg drop-shadow-md px-3 py-2 input-placeholder text-body2 min-w-32"
                 placeholder="전화번호를 입력해주세요."
               />
             </div>
