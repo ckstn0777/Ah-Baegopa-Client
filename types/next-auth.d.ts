@@ -18,10 +18,16 @@ declare module 'next-auth' {
 
   interface User {
     id: string
-    name: string
-    email: string
-    image: string
-    role: 'ADMIN' | 'USER'
+    nickname?: string | undefined
+    name?: string | undefined
+    email?: string | undefined
+    gender?: 'F' | 'M' | 'U' | undefined
+    age?: string | undefined
+    birthday?: string | undefined
+    profile_image?: string | undefined
+    birthyear?: string | undefined
+    mobile?: string | undefined
+    role?: 'ADMIN' | 'USER'
   }
 }
 
